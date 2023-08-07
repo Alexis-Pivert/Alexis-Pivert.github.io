@@ -12,7 +12,16 @@
   <meta name="author" content="VALENTIN AUGER; Alexis Pivet">
   <link rel="shortcut icon" href="favicon.png">
   <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
-
+  <script>
+    function downloadPDF(file) {
+    var fileUrl = "pdf/"+file+".pdf";
+    var fileName = file;
+  
+    var a = document.createElement("a");
+    a.href = fileUrl;
+    a.download = fileName;
+    a.click();
+  }</script>
 
   <meta name="description" content="" />
   <meta name="keywords" content="free template, bootstrap, bootstrap4" />
@@ -171,8 +180,15 @@
               </div>
             </a>
           </div>
-
-<!-- endfooter -->
+        </div>
+      </div>
+      <div class="col-sm-4">
+          <h4><br><b style="font-weight: 700;">Mes PDF :</b></h4>
+          <p><br><div class="row justify-content-between"><button class="btn btn-primary" onclick="downloadPDF('ALEXIS_PIVERT_PORFOLIO')"><a>Mon portfolio</a></button></div></p>
+          <p><div class="row justify-content-between"><button class="btn btn-primary" onclick="downloadPDF('BAC_PRO_fiche_formation')"><a>Fiche de formation Bac pro</a></button></div></p>
+          <p><div class="row justify-content-between"><button class="btn btn-primary" onclick="downloadPDF('PIVERT_ALEXIS_CV')"><a>Mon CV</a></button></div></p>
+          <p><div class="row justify-content-between"><button class="btn btn-primary" onclick="downloadPDF('CFA_ plaquette info apprentissage - Aide exceptionnelle')"><a>Apprentissage: Aides à l'embauche</a></button></div></p>
+      </div>
 
 
   <div id="overlayer"></div>
